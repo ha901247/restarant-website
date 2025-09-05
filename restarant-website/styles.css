@@ -1,0 +1,205 @@
+/* ---------------- Reset ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  background: #000;
+  color: #fff;
+}
+
+/* ---------------- Navbar ---------------- */
+header {
+  background: #000;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #bb0000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: rgb(216, 216, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+    color: white;
+  }
+}
+
+/* ---------------- Hero ---------------- */
+.hero {
+  text-align: center;
+  padding: 250px 80px;
+  background: url("images/restaurant-bg.jpg") center/cover no-repeat;
+}
+
+
+
+/* ---------------- Menu ---------------- */
+#menu {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+}
+
+#menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.menu-categories {
+  margin-bottom: 30px;
+}
+
+.menu-categories button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.menu-categories button:hover {
+  background: #e6b800;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.menu-items img {
+  display: block;
+  width: 100%;
+  height: 220px;        /* fix size */
+  object-fit: cover;    /* crop properly */
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.menu-items img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------- Gallery ---------------- */
+#gallery {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;       /* fix size */
+  object-fit: cover;   /* crop properly */
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------- Contact ---------------- */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #e6b800;
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: white;
+  margin-top: 20px;
+}
